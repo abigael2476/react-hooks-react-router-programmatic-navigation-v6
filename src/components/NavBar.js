@@ -1,22 +1,11 @@
-import { NavLink} from "react-router-dom";
-import "./NavBar.css";
+import { NavLink } from "react-router-dom";
 
-function NavBar() {
-
+function NavBar({ logout }) {
   return (
-    <nav>
-      <NavLink
-        to="/"
-        className="nav-link" 
-      >
-        Home
-      </NavLink>
-      <NavLink
-        to="/about"
-        className="nav-link"
-      >
-        About
-      </NavLink>
+    <nav style={{ padding: "1rem", background: "#eee" }}>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/about">About</NavLink>
+      <button onClick={logout}>Logout</button>
     </nav>
   );
 }
